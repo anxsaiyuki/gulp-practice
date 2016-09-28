@@ -7,19 +7,19 @@ gulp.task('hello', function() {
 })
 
 gulp.task('sass', function(){
-  return gulp.src('app/scss/**/*.scss')
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('src/css'))
 });
 
 gulp.task('watch', function(){
-  gulp.watch('app/scss/**/*.scss', ['sass']); 
+  gulp.watch('src/scss/**/*.scss', ['sass']); 
   // Other watchers
 })
 
 gulp.task('copy', function() {
-	var folders = ['app/**/*.html','app/**/*.css','app/**/*.js'];
-	
+	var folders = ['src/**/*.html','src/**/*.css','src/**/*.js','src/**/*.png'];
+
 	folders.map(function(folder) {
 		return gulp.src(folder)
 					     .pipe(gulp.dest('./dist/'));
