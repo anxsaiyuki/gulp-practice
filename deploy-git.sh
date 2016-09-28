@@ -2,9 +2,5 @@ git add -A
 echo "Please enter commit message: "
 read input_message
 echo "You entered: $input_message"
-git commit -m $input_message
-
-echo "Please enter username"
-read username
-echo "Please enter password"
-read password
+git commit -m "$input_message"
+git push -u origin master
